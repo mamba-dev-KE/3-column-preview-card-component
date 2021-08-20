@@ -1,119 +1,125 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
-    color: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+
+main {
+	background-color: hsl(0, 0%, 95%);
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .row {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
 }
 
 .sedan {
-    background-color: hsl(31, 77%, 52%);
+	background-color: hsl(31, 77%, 52%);
+	flex-grow: 1;
 }
 
 .suv {
-    background-color: hsl(184, 100%, 22%);
+	background-color: hsl(184, 100%, 22%);
+	flex-grow: 1;
 }
 
 .luxury {
-    background-color: hsl(179, 100%, 13%);
+	background-color: hsl(179, 100%, 13%);
+	flex-grow: 1;
 }
 
 .sedan,
 .suv,
 .luxury {
-    padding: 6em;
+	padding: 6em;
 }
 
 .card-title {
-    text-transform: uppercase;
-    font-family: 'Big Shoulders Display', cursive;
-    font-size: 3.6rem;
+	text-transform: uppercase;
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 3.6rem;
 }
 
 .card-body {
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: hsla(0, 0%, 100%, 0.75);
-    line-height: 1.8;
-    width: 80%;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: hsla(0, 0%, 100%, 0.75);
+	line-height: 1.8;
+	width: 80%;
 }
 
 .card-button {
-    padding: 1.2em 3em;
-    border-radius: 100px;
-    border: 3px solid #fff;
-    font-size: 1.6rem;
-    margin-top: 2em;
+	padding: 1.2em 3em;
+	border-radius: 100px;
+	border: 3px solid #fff;
+	font-size: 1.6rem;
+	margin-top: 2em;
 }
 
 .sedan .card-button {
-    color: hsl(31, 77%, 52%);
+	color: hsl(31, 77%, 52%);
 }
 
 .suv .card-button {
-    color: hsl(184, 100%, 22%);
+	color: hsl(184, 100%, 22%);
 }
 
 .luxury .card-button {
-    color: hsl(179, 100%, 13%);
+	color: hsl(179, 100%, 13%);
 }
 
 .sedan .card-button:hover,
 .suv .card-button:hover,
 .luxury .card-button:hover {
-    color: #fff;
+	color: #fff;
 }
 
 .sedan .card-button:hover {
-    background-color: hsl(31, 77%, 52%);
+	background-color: hsl(31, 77%, 52%);
 }
 
 .suv .card-button:hover {
-    background-color: hsl(184, 100%, 22%);
+	background-color: hsl(184, 100%, 22%);
 }
 
 .luxury .card-button:hover {
-    background-color: hsl(179, 100%, 13%);
+	background-color: hsl(179, 100%, 13%);
 }
 
-@media(min-width: 600px) {
+@media (min-width: 600px) {
+	.container {
+		max-width: 1000px;
+	}
 
-    .container {
-        max-width: 1000px;
-    }
+	.card {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .card {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	.row {
+		flex-direction: row;
+	}
 
-    .row {
-        flex-direction: row;
-    }
-
-    .card-body {
-        width: 100%;
-    }
-
+	.card-body {
+		width: 100%;
+	}
 }
