@@ -14,20 +14,25 @@ body {
 	font-family: "Lexend Deca", sans-serif;
 	font-weight: 400;
 	color: #fff;
+	background-color: hsl(0, 0%, 95%);
 }
 
 main {
-	background-color: hsl(0, 0%, 95%);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 img {
 	max-width: 100%;
 }
 
-.row {
-	display: flex;
-	flex-direction: column;
-	/* flex-wrap: wrap; */
+.card {
+	margin: 2em;
+	border-radius: 6px;
+	z-index: 1;
+	overflow: hidden;
 }
 
 .sedan {
@@ -43,12 +48,13 @@ img {
 .luxury {
 	background-color: hsl(179, 100%, 13%);
 	flex-grow: 1;
+	z-index: -1000;
 }
 
 .sedan,
 .suv,
 .luxury {
-	padding: 6em;
+	padding: 4.5em;
 }
 
 .card-title {
@@ -62,7 +68,6 @@ img {
 	font-size: 1.5rem;
 	color: hsla(0, 0%, 100%, 0.75);
 	line-height: 1.8;
-	width: 80%;
 }
 
 .card-button {
@@ -103,23 +108,19 @@ img {
 	background-color: hsl(179, 100%, 13%);
 }
 
-@media (min-width: 600px) {
-	.container {
-		max-width: 1000px;
+@media (min-width: 400px) {
+	.card-body {
+		width: 89%;
 	}
 
 	.card {
-		min-height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 
-	.row {
-		flex-direction: row;
-	}
-
-	.card-body {
-		width: 100%;
+	.sedan,
+	.suv,
+	.luxury {
+		flex-grow: 0;
 	}
 }
