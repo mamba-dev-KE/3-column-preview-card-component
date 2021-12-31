@@ -18,7 +18,7 @@ body {
 }
 
 main {
-	min-height: 100vh;
+	min-height: 90vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -57,6 +57,15 @@ img {
 	padding: 4.5em;
 }
 
+.card-img {
+	transition: transform 150ms ease-in-out;
+}
+
+.card-img:hover {
+	transform: scale(1.15);
+	cursor: pointer;
+}
+
 .card-title {
 	text-transform: uppercase;
 	font-family: "Big Shoulders Display", cursive;
@@ -76,6 +85,12 @@ img {
 	border: 3px solid #fff;
 	font-size: 1.6rem;
 	margin-top: 2em;
+	font-weight: 700;
+	transition: all 100ms ease-in-out;
+}
+
+.card-button:hover {
+	cursor: pointer;
 }
 
 .sedan .card-button {
@@ -106,6 +121,26 @@ img {
 
 .luxury .card-button:hover {
 	background-color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+	margin-top: -1.5em;
+}
+
+.attribution a {
+	color: #595959;
+}
+
+.attribution a:hover {
+	color: #190eb8;
+}
+
+.attribution__designer,
+.attribution__programmer {
+	font-size: 1.2rem;
+	margin-top: 1em;
 }
 
 @media (min-width: 400px) {
