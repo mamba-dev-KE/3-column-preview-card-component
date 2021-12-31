@@ -17,6 +17,12 @@ body {
 	background-color: hsl(0, 0%, 95%);
 }
 
+h1 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
 main {
 	min-height: 90vh;
 	display: flex;
