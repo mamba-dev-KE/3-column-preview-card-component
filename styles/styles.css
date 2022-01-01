@@ -66,10 +66,18 @@ img {
 	cursor: pointer;
 }
 
+.sedan .card-title {
+	margin-top: 0.9em;
+}
+
 .card-title {
 	text-transform: uppercase;
 	font-family: "Big Shoulders Display", cursive;
 	font-size: 3.6rem;
+}
+
+.sedan .card-body {
+	margin-top: 1.7em;
 }
 
 .card-body {
