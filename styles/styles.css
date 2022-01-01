@@ -62,7 +62,7 @@ img {
 }
 
 .card-img:hover {
-	transform: scale(1.15);
+	transform: translateX(20px);
 	cursor: pointer;
 }
 
